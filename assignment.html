@@ -54,64 +54,33 @@
         }
 
         @keyframes flick1 {
+
             0% {
-                filter: brightness(2.5) opacity(1);
-                width: 20%;
-                height: 20%;
+                filter: brightness(3.5) opacity(0%);
+                width: 10%;
+                height: 10%;
             }
 
-            40% {
-                filter: brightness(2.5) opacity(0.75);
+            1% {
+                filter: brightness(3.5) opacity(50%);
+                width: 10%;
+                height: 10%;
+            }
+
+            50% {
+                filter: brightness(3.5) opacity(50%);
                 width: 80%;
                 height: 80%;
             }
 
-            60% {
-                filter: brightness(1.5) opacity(0.5);
-                width: 100%;
-                height: 100%;
-            }
-
-            80% {
-                filter: brightness(1) opacity(0.25);
-                width: 100%;
-                height: 100%;
+            75% {
+                filter: brightness(2.5) opacity(50%);
+                width: 90%;
+                height: 90%;
             }
 
             100% {
-                filter: brightness(1) opacity(0);
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        @keyframes flick2 {
-            0% {
-                filter: brightness(2.5) opacity(1);
-                width: 20%;
-                height: 20%;
-            }
-
-            40% {
-                filter: brightness(2.5) opacity(0.75);
-                width: 80%;
-                height: 80%;
-            }
-
-            60% {
-                filter: brightness(1.5) opacity(0.5);
-                width: 100%;
-                height: 100%;
-            }
-
-            80% {
-                filter: brightness(1) opacity(0.25);
-                width: 100%;
-                height: 100%;
-            }
-
-            100% {
-                filter: brightness(1) opacity(0);
+                filter: brightness(2.5) opacity(50%);
                 width: 100%;
                 height: 100%;
             }
@@ -127,7 +96,7 @@
             height: 240px;
             border-radius: 100%;
             background-color: #050210;
-            animation: flick1 2s ease-out 1s infinite;
+            animation: flick1 2s linear 1000ms infinite;
         }
 
         #type-2::after {
@@ -140,7 +109,7 @@
             height: 240px;
             border-radius: 100%;
             background-color: #050210;
-            animation: flick2 2s ease-out infinite;
+            animation: flick1 2s linear infinite;
         }
     </style>
 </head>
