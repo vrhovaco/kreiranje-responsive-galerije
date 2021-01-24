@@ -4,17 +4,20 @@
 <head>
     <title>Animacija-Assignment</title>
     <style>
+        body {
+            background-color: #0e0e0e;
+        }
         .box {
             background-color: #050210;
             width: 600px;
             height: 492px;
-            margin: 30px auto;
+            margin: 238.5px auto;
             position: relative;
         }
 
         .circle {
             position: absolute;
-            top: 50%;
+            top: 53%;
             left: 50%;
             transform: translate(-50%, -50%);
             border-radius: 100%;
@@ -27,8 +30,8 @@
         }
 
         #type-1 {
-            width: 285px;
-            height: 285px;
+            width: 300px;
+            height: 300px;
             background: linear-gradient(45deg, #fb5dad, #55fb9f, #b97aff);
             animation: rotation 1s linear infinite reverse;
         }
@@ -37,50 +40,48 @@
         #type-1::before {
             content: '';
             position: absolute;
-            top: -30px;
-            left: -30px;
-            right: -30px;
-            bottom: -30px;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
             border-radius: 100%;
             background: linear-gradient(45deg, #fb5dad, #55fb9f, #b97aff);
-            filter: blur(50px);
+            filter: blur(55px);
         }
 
         #type-2 {
             background-color: #050210;
             filter: brightness(1.5);
-            width: 240px;
-            height: 240px;
+            width: 260px;
+            height: 260px;
         }
 
         @keyframes flick1 {
 
             0% {
-                filter: brightness(3.5) opacity(0%);
+                filter: brightness(3.2) saturate(60%) opacity(0%);
                 width: 10%;
                 height: 10%;
             }
 
             1% {
-                filter: brightness(3.5) opacity(50%);
+                filter: brightness(3.2) saturate(60%) opacity(50%);
                 width: 10%;
                 height: 10%;
             }
 
             50% {
-                filter: brightness(3.5) opacity(50%);
+                filter: brightness(3.2) saturate(60%) opacity(50%);
                 width: 80%;
                 height: 80%;
             }
 
             75% {
-                filter: brightness(2.5) opacity(50%);
-                width: 90%;
-                height: 90%;
+                filter: brightness(2.5) saturate(60%) opacity(50%);
             }
 
             100% {
-                filter: brightness(2.5) opacity(50%);
+                filter: brightness(2.5) saturate(60%) opacity(50%);
                 width: 100%;
                 height: 100%;
             }
