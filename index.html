@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment - Kreiranje responsive galerije</title>
+
+    <style>
+        :root {
+            --primary-color: rgb(132, 171, 253);
+            background-color: #1f1f1f;
+            font-family: sans-serif;
+            color: var(--primary-color);
+        }
+
+        ::selection {
+            color: #1f1f1f;
+            background-color: var(--primary-color);
+        }
+
+        .site {
+            max-width: 960px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+        }
+
+        .container {
+            max-width: 960px;
+            width: 100%;
+            margin: 16px auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-auto-rows: minmax(144px, auto);
+            grid-gap: 36px;
+        }
+
+        .box {
+            background-image: url("placeholder-image.png");
+            background-color: var(--primary-color);
+            border-radius: 8px;
+            color: black;
+            position: relative;
+            z-index: -1;
+        }
+
+        .box > img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .box::before {
+            content: 'Image Title';
+            position: absolute;
+            top: calc (100%-30px);
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-color: white;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            text-align: center;
+            line-height: 32px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;   
+            font-size: 14px;
+        }
+
+        .box::after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            border-radius: 8px;
+            background: var(--primary-color);
+            filter: blur(5px);
+            z-index: -2;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .site {
+                width: 768px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .site {
+                width: 576px;
+            }
+        }
+
+        @media screen and (max-width: 567px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .site {
+                width: 404px;
+            }
+        }
+
+        @media screen and (max-width: 414px) {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .site {
+                width: 212px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="site">
+        <h3>Assignment - Kreiranje responsive galerije</h1>
+            <div class="container">
+                <div class="box"><img src="placeholder-image.png"></div>
+                <div class="box"><img src="placeholder-image.png"></div>
+                <div class="box"><img src="placeholder-image.png"></div>
+                <div class="box"><img src="placeholder-image.png"></div>
+                <div class="box"><img src="placeholder-image.png"></div>
+                <div class="box"><img src="placeholder-image.png"></div>
+                <div class="box"><img src="placeholder-image.png"></div>
+                <div class="box"><img src="placeholder-image.png"></div>
+                <div class="box"><img src="placeholder-image.png"></div>
+                <div class="box"><img src="placeholder-image.png"></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                id
+                est
+                laborum.</p>
+    </div>
+</body>
+
+</html>
